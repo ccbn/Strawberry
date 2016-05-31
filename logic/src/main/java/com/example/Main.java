@@ -1,11 +1,15 @@
 package com.example;
 
+import com.mysql.jdbc.ResultSetMetaData;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by carlnielsen on 31/05/16.
@@ -13,29 +17,9 @@ import java.sql.Statement;
 public class Main {
 
     public static void main(String [] args) {
-
-        Connection conn = null;
-        String url = "jdbc:mysql://2.104.1.132:3306/strawberry";
-        String user = "carl";
-        String password = "cocacola";
-
-        try {
-            conn = DriverManager.getConnection(url,user,password);
-
-            Statement stm = conn.createStatement();
-
-            //stm.execute("INSERT INTO skills VALUES (NULL,'Python')");
-            stm.execute("select * from Skills");
-
-            System.out.println("Connected to database");
-        } catch (SQLException ex) {
-            // handle any errors
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
-        }
-
-
+        DatabaseManager dm = new DatabaseManager();
+        ArrayList<HashMap<String, Object>> studentsWithColumnNames = dm.getStudentsWithColumnNames();
+        System.out.println(studentsWithColumnNames.size());
     }
 }
 //hello world
