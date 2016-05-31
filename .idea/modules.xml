@@ -5,8 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Strawberry.iml" filepath="$PROJECT_DIR$/Strawberry.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strawberry1.iml" filepath="$PROJECT_DIR$/Strawberry1.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/logic/logic.iml" filepath="$PROJECT_DIR$/logic/logic.iml" />
       <module fileurl="file://$PROJECT_DIR$/logic/logic.iml" filepath="$PROJECT_DIR$/logic/logic.iml" />
     </modules>
   </component>

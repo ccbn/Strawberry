@@ -15,15 +15,17 @@ public class Main {
     public static void main(String [] args) {
 
         Connection conn = null;
+        String url = "jdbc:mysql://2.104.1.132:3306/strawberry";
+        String user = "carl";
+        String password = "cocacola";
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/db1?" +
-                            "user=carl&password=user");
+            conn = DriverManager.getConnection(url,user,password);
 
             Statement stm = conn.createStatement();
 
             //stm.execute("INSERT INTO skills VALUES (NULL,'Python')");
-            stm.execute("SELECT * ");
+            stm.execute("select * from Skills");
 
             System.out.println("Connected to database");
         } catch (SQLException ex) {
