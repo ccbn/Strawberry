@@ -3,4 +3,15 @@ apply plugin: 'java'
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile files('src/main/java/com/example/mysql-connector-java-5.1.39-bin.jar')
+    compile files('src/main/java/com/example/hibernate-core-5.1.0.Final.jar')
+    compile files('libs/Hibernate/antlr-2.7.7.jar')
+    compile files('libs/Hibernate/classmate-1.3.0.jar')
+    compile files('libs/Hibernate/dom4j-1.6.1.jar')
+    compile files('libs/Hibernate/geronimo-jta_1.1_spec-1.1.1.jar')
+    compile files('libs/Hibernate/hibernate-commons-annotations-5.0.1.Final.jar')
+    compile files('libs/Hibernate/hibernate-core-5.1.0.Final.jar')
+    compile files('libs/Hibernate/hibernate-jpa-2.1-api-1.0.0.Final.jar')
+    compile files('libs/Hibernate/jandex-2.0.0.Final.jar')
+    compile files('libs/Hibernate/javassist-3.20.0-GA.jar')
+    compile files('libs/Hibernate/jboss-logging-3.3.0.Final.jar')
 }

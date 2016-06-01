@@ -35,12 +35,12 @@ public class DatabaseManager {
             Statement stm = conn.createStatement();
             ResultSet students = stm.executeQuery("select * from students");
             ResultSetMetaData metaData = (ResultSetMetaData) students.getMetaData();
-            ArrayList<String> listOfMetaDataOfStudents = new ArrayList<String>();
-            ArrayList<HashMap<String,Object>> listOfStudents = new ArrayList<HashMap<String, Object>>();
+            ArrayList<String> listOfMetaDataOfStudents = new ArrayList<>();
+            ArrayList<HashMap<String,Object>> listOfStudents = new ArrayList<>();
 
             if(students != null) {
                 while(students.next()) {
-                    HashMap<String,Object> student = new HashMap<String,Object>();
+                    HashMap<String,Object> student = new HashMap<>();
                     for(String nameOfColumn: listOfMetaDataOfStudents) {
                         student.put(nameOfColumn, students.getObject(nameOfColumn));
                     }
@@ -57,6 +57,6 @@ public class DatabaseManager {
     }
 
     public ArrayList<Student> getStudents() {
-        
+        return null;
     }
 }
